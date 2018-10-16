@@ -1,0 +1,139 @@
+ideas = {
+	# RIMMY3
+
+
+	army_chief = {
+
+	    RIM_Todd_Howard = {
+			
+			
+			allowed = {
+				original_tag = RIM
+			}
+			
+
+			
+			traits = { country_roads }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		RIM_Thomas_Quickinton = {
+			
+			
+			allowed = {
+				original_tag = RIM
+			}
+			
+
+			
+			traits = { army_chief_drill_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		RIM_Thomas_Charginton = {
+			
+			
+			allowed = {
+				original_tag = RIM
+			}
+			
+
+			
+			traits = { army_chief_offensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		RIM_Thomas_Manueverton = {
+			
+			
+			allowed = {
+				original_tag = RIM
+			}
+			
+
+			
+			traits = { army_chief_maneuver_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		RIM_Thomas_Refinton = {
+			
+			
+			allowed = {
+				original_tag = RIM
+			}
+			
+
+			
+			traits = { army_chief_reform_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		RIM_Thomas_Fenderton = {
+			
+			
+			allowed = {
+				original_tag = RIM
+			}
+			
+
+			
+			traits = { army_chief_morale_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		RIM_Isorrow_Productions = {
+			
+			
+			allowed = {
+				original_tag = RIM
+			}
+			available = {
+				has_completed_focus = RIM_isp_choice
+			}
+			
+
+			
+			traits = { army_chief_morale_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		RIM_Drew_Durnil = {
+			
+			
+			allowed = {
+				original_tag = RIM
+			}
+			available = {
+				has_completed_focus = RIM_drew_choice
+			}
+			
+
+			
+			traits = { army_chief_morale_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}

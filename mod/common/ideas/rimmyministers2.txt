@@ -1,0 +1,175 @@
+ideas = {
+	# RIMMY2
+
+
+	political_advisor = {
+
+		RIM_Thomas_Rimmin = {
+
+			picture = idea_thomas_rimmin
+
+			allowed = {
+				original_tag = RIM
+			}
+			
+			traits = { fascist_demagogue }
+		}
+
+		RIM_Thomas_Trotskin = {
+
+			picture = idea_thomas_trotskin
+
+			allowed = {
+				original_tag = RIM
+			}
+			
+			traits = { communist_revolutionary }
+		}
+
+		RIM_Thomas_Spiffing = {
+
+			picture = idea_thomas_spiffing
+
+			allowed = {
+				original_tag = RIM
+			}
+			
+			traits = { democratic_reformer }
+		}
+
+		RIM_The_Monkey = {
+
+			picture = idea_the_monkey
+
+			allowed = {
+				original_tag = RIM
+			}
+			
+			traits = { staunch_monarchist }
+		}
+
+		RIM_Thomas_Minington = {
+
+			picture = idea_thomas_minington
+
+			allowed = {
+				original_tag = RIM
+			}
+			
+			traits = { war_industrialist }
+		}
+
+		RIM_Thomas_Relatablin = {
+
+			picture = idea_thomas_relatablin
+
+			allowed = {
+				original_tag = RIM
+			}
+			
+			traits = { smooth_talking_charmer }
+		}
+
+		RIM_Thomas_Evilton = {
+
+			picture = idea_thomas_evilton
+
+			allowed = {
+				original_tag = RIM
+			}
+			
+			traits = { backroom_backstabber }
+		}
+
+		RIM_Thomas_Threatenon = {
+
+			picture = idea_thomas_threatenon
+
+			allowed = {
+				original_tag = RIM
+			}
+			
+			traits = { prince_of_terror }
+		}
+
+		RIM_Sir_Rimmy = {
+
+			picture = idea_sir_rimmy
+
+			allowed = {
+				original_tag = RIM
+			}
+			
+			traits = { popular_figurehead }
+		}
+
+		RIM_Thomas_Workenton = {
+
+			picture = idea_thomas_workenton
+
+			allowed = {
+				original_tag = RIM
+			}
+			
+			traits = { silent_workhorse }
+		}
+
+		RIM_Leon_Degrelle = {
+
+			picture = idea_leon_degrelle
+
+			allowed = {
+				original_tag = RIM
+			}
+			available = {
+				has_completed_focus = RIM_begin_the_plan
+			}
+			
+			traits = { captain_of_industry }
+		}
+
+		RIM_Thomas_The_Engineer = {
+
+			picture = idea_thomas_the_engineer
+
+			allowed = {
+				original_tag = RIM
+			}
+			available = {
+				has_completed_focus = RIM_fortification_focus
+			}
+			
+			traits = { fortification_engineer }
+		}
+
+		RIM_Thomas_Smartinton = {
+
+			picture = idea_thomas_smartinton
+
+			allowed = {
+				original_tag = RIM
+			}
+			
+			traits = { financial_expert }
+		}
+
+		RIM_Senor_Degrelle = {
+
+			picture = idea_senor_degrelle
+
+			allowed = {
+				original_tag = RIM
+			}
+			available = {
+				has_country_flag = senor_appeared
+			}
+
+			
+			traits = { captain_of_industry financial_expert }
+		}
+
+        
+		
+	
+		
+

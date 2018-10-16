@@ -1,0 +1,311 @@
+ideas = {
+	country = {
+		rimmy_downunder = {
+			
+			
+			allowed = {
+				original_tag = "RIM"
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+					has_government = fascism
+					has_government = democratic
+				}
+				NOT = {
+					any_other_country = {
+						original_tag = RIM
+						has_government = neutrality
+					}
+				}
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.05				
+			}
+		}
+
+		rimmy_staff = {
+			
+			allowed = {
+				original_tag = RIM
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_Factor = 0.05
+				planning_speed = 0.25
+			}
+		}
+
+		anti_press = {
+			
+			allowed = {
+				original_tag = RIM
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = -0.001
+				democratic_drift = -0.10
+				communism_drift = -0.10
+				neutrality_drift = 0.10	
+				fascism_drift = 0.10
+			}
+		}
+
+		RIM_copy_autarky = {
+			
+			allowed = {
+				original_tag = RIM
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+			}
+		}
+
+		finalize_plan = {
+			
+			allowed = {
+				original_tag = RIM
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.10
+				industrial_capacity_factory = 0.3
+				production_speed_buildings_factor = 0.5
+				production_speed_arms_factory_factor = 0.5
+				research_time_factor = -0.10
+			}
+		}
+
+		isp_choice = {
+			
+			allowed = {
+				original_tag = RIM
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_Factor = 0.15
+				training_time_factor = -0.1
+				out_of_supply_factor = -0.10
+				amphibious_invasion = 0.15
+				army_artillery_attack_factor = 0.20
+				army_armor_speed_factor = 0.20
+				army_armor_defence_factor = 0.10
+				air_paradrop_defence_factor = 0.10
+				air_paradrop_attack_factor = 0.5
+				air_interception_attack_factor = 0.05
+			}
+		}
+
+		drew_choice = {
+			
+			allowed = {
+				original_tag = RIM
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_Factor = 0.4
+				conscription_factor = 0.1000
+				army_armor_speed_factor = 0.25
+				cavalry_attack_factor = 0.40
+				motorized_attack_factor = 0.10
+				out_of_supply_factor = 0.10
+			}
+		}
+
+		leon_memories = {
+			
+			allowed = {
+				original_tag = RIM
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.15
+				production_speed_arms_factory_factor = 0.1
+				stability_weekly = -0.001
+			}
+		}
+
+		government_scandal = {
+			
+			allowed = {
+				original_tag = RIM
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = -0.10
+				neutrality_drift = -0.20
+			}
+		}
+
+		admitted_scandal = {
+			
+			allowed = {
+				original_tag = RIM
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = -0.0010
+				neutrality_drift = -0.0010
+			}
+		}
+
+		prolonged_scandal = {
+			
+			allowed = {
+				original_tag = RIM
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = -0.010
+				neutrality_drift = -0.010
+				democratic_drift = 0.010
+				communism_drift = 0.010
+				fascism_drift = 0.010
+			}
+		}
+
+		rimmy_influence = {
+			
+			allowed = {
+				original_tag = RIM
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				neutrality_drift = 0.10
+			}
+		}
+
+		artillery_only = {
+			
+			allowed = {
+				original_tag = RIM
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_artillery_attack_factor = 0.65
+				army_artillery_defence_factor = 0.10
+				army_org_Factor = 0.25
+			}
+		}
+
+		bokoen_choice = {
+			
+			allowed = {
+				original_tag = RIM
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_armor_speed_factor = 0.20
+				encryption_factor = 0.7
+				army_morale_factor = 0.10
+				winter_attrition_factor = -0.50
+			}
+		}
+
+		alex_choice = {
+			
+			allowed = {
+				original_tag = RIM
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				air_paradrop_attack_factor = 0.90
+				air_paradrop_defence_factor = -0.30
+				air_accidents_factor = 0.05
+				naval_retreat_speed = 0.100
+				army_armor_speed_factor = 0.75
+				max_planning = 0.50
+				max_dig_in = 1
+			}
+		}

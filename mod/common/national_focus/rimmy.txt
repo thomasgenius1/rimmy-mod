@@ -1,0 +1,2955 @@
+focus_tree = {
+	id = rimmy_focus
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = RIM
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 50 y = 1650 }
+
+	focus = {
+		id = RIM_begin_the_plan
+		icon = GFX_goal_generic_construction
+		x = 5
+		y = 0
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = GER_four_year_plan
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = RIM_Leon_Degrelle
+		}
+	}
+
+	focus = {
+		id = RIM_industrial_effort_1
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = RIM_begin_the_plan }
+		x = 5
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				NOT = {
+					any_owned_state = {
+						is_controlled_by = ROOT
+						free_building_slots = {
+							building = industrial_complex
+							size > 2
+							include_locked = yes
+						}
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					is_on_continent = europe
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					is_on_continent = europe
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							free_building_slots = {
+								building = industrial_complex
+								size > 1
+								include_locked = yes
+							}
+							is_on_continent = europe
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}				
+			}
+		}
+	}
+
+	focus = {
+		id = RIM_industrial_effort_2
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = RIM_industrial_effort_1 }
+		x = 3
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				NOT = {
+					any_owned_state = {
+						is_controlled_by = ROOT
+						free_building_slots = {
+							building = arms_factory
+							size > 2
+							include_locked = yes
+						}
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					arms_factory > 0
+					free_building_slots = {
+						building = arms_factory
+						size > 7
+						include_locked = yes
+					}
+					is_on_continent = europe
+				}
+				add_extra_state_shared_building_slots = 7
+				add_building_construction = {
+					type = arms_factory
+					level = 7
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					arms_factory > 0
+					free_building_slots = {
+						building = arms_factory
+						size > 7
+						include_locked = yes
+					}
+					is_on_continent = europe
+				}
+				add_extra_state_shared_building_slots = 7
+				add_building_construction = {
+					type = arms_factory
+					level = 7
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							arms_factory > 0
+							free_building_slots = {
+								building = arms_factory
+								size > 1
+								include_locked = yes
+							}
+							is_on_continent = europe
+						}
+					}					
+				}
+				random_owned_controlled_state = {
+					limit = {
+						arms_factory > 0
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+						is_on_continent = europe
+					}
+					add_extra_state_shared_building_slots = 7
+					add_building_construction = {
+						type = arms_factory
+						level = 7
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						arms_factory > 0
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+						is_on_continent = europe
+					}
+					add_extra_state_shared_building_slots = 7
+					add_building_construction = {
+						type = arms_factory
+						level = 7
+						instant_build = yes
+					}
+				}			
+			}
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							free_building_slots = {
+								building = arms_factory
+								size > 1
+								include_locked = yes
+							}
+							is_on_continent = europe
+						}
+					}					
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 7
+					add_building_construction = {
+						type = arms_factory
+						level = 7
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 7
+					add_building_construction = {
+						type = arms_factory
+						level = 7
+						instant_build = yes
+					}
+				}			
+			}
+		}
+	}
+
+	focus = {
+		id = RIM_rimmy_highways
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = RIM_industrial_effort_1 }
+		x = 5
+		y = 2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RIM_rimmy_highways_2
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = RIM_rimmy_highways }
+		x = 7
+		y = 3
+		cost = 10
+
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RIM_industrial_effort_3
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = RIM_industrial_effort_2 }
+		x = -1
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				NOT = {
+					any_owned_state = {
+						is_controlled_by = ROOT
+						free_building_slots = {
+							building = industrial_complex
+							size > 2
+							include_locked = yes
+						}
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					is_on_continent = europe
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					is_on_continent = europe
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							free_building_slots = {
+								building = industrial_complex
+								size > 1
+								include_locked = yes
+							}
+							is_on_continent = europe
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = industrial_complex
+						level = 4
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = industrial_complex
+						level = 4
+						instant_build = yes
+					}
+				}				
+			}
+		}
+	}
+
+	focus = {
+		id = RIM_industrial_effort_4
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = RIM_industrial_effort_2 }
+		x = 1
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				NOT = {
+					any_owned_state = {
+						is_controlled_by = ROOT
+						free_building_slots = {
+							building = arms_factory
+							size > 2
+							include_locked = yes
+						}
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					arms_factory > 0
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+					is_on_continent = europe
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					arms_factory > 0
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+					is_on_continent = europe
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							arms_factory > 0
+							free_building_slots = {
+								building = arms_factory
+								size > 1
+								include_locked = yes
+							}
+							is_on_continent = europe
+						}
+					}					
+				}
+				random_owned_controlled_state = {
+					limit = {
+						arms_factory > 0
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+						is_on_continent = europe
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = arms_factory
+						level = 3
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						arms_factory > 0
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+						is_on_continent = europe
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = arms_factory
+						level = 3
+						instant_build = yes
+					}
+				}			
+			}
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							free_building_slots = {
+								building = arms_factory
+								size > 1
+								include_locked = yes
+							}
+							is_on_continent = europe
+						}
+					}					
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = arms_factory
+						level = 3
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = arms_factory
+						level = 3
+						instant_build = yes
+					}
+				}			
+			}
+		}
+	}
+
+	focus = {
+		id = RIM_extra_tech_slot
+		icon = GFX_focus_research
+		text = extra_tech_slot
+		prerequisite = { focus = RIM_industrial_effort_2 }
+		available = {
+			num_of_factories > 50
+		}
+		x = 3
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = RIM_begin_second_part
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = RIM_extra_tech_slot }
+		prerequisite = { focus = RIM_industrial_effort_4 }
+		prerequisite = { focus = RIM_industrial_effort_3 }
+		prerequisite = { focus = RIM_coal_liquidization }
+		prerequisite = { focus = RIM_rimmy_highways_2 }
+		x = 4
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 9
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = GER_autarky
+				bonus = 0.5
+				uses = 2
+				technology = excavation1
+				technology = excavation2
+				technology = excavation3
+				technology = excavation4
+				technology = excavation5
+			}
+			add_ideas = RIM_copy_autarky
+		}
+	}
+
+	focus = {
+		id = RIM_coal_liquidization
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = RIM_rimmy_highways }
+		x = 5
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+			has_full_control_of_state = 674
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = GER_coal_liquidization
+				bonus = 0.75
+				uses = 1
+				category = synth_resources
+			}
+			if = {
+				limit = {
+					has_full_control_of_state = 674
+				}
+				674 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = synthetic_refinery
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RIM_continue_plan
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = RIM_begin_second_part }
+		x = 1
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+
+		available_if_capitulated = no
+
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = RIM_industrial_effort_2_2IC }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = RIM_industrial_effort_2_2IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = RIM_industrial_effort_2_2IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = RIM_industrial_effort_2_2IC
+			}
+		}
+	}
+
+	focus = {
+		id = RIM_fortification_effort
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = RIM_begin_second_part }
+		x = 3
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+			# Victoria
+			517 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 4
+					province = 7798
+					instant_build = yes
+				}
+			}
+			# New South Wales
+			285 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 4
+					province = 12406
+					instant_build = yes
+				}
+			}
+			# QueensLand
+			521 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 4
+					province = 7564
+					instant_build = yes
+				}
+			}
+			# Queensland
+			521 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 4
+					province = 7566
+					instant_build = yes
+				}
+			}
+			522 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 4
+					province = 1652
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RIM_prospect_for_oil
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = RIM_begin_second_part }
+		available = {
+			RIM = {
+				controls_state = 737 
+			}
+		}
+		bypass = {
+			737 = {
+				has_state_flag = rimmy_oil_developed
+			}
+		}
+		
+		x = 5
+		y = 5
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+			add_resource = {
+				type = oil
+				amount = 10
+				state = 737
+			}
+			737 = {
+				set_state_flag = rimmy_oil_developed
+			}
+		}
+	}
+
+	focus = {
+		id = RIM_overseas_infrastructure
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = RIM_begin_second_part }
+		x = 7
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			737 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = infrastructure
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+			523 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = infrastructure
+						level = 4
+						instant_build = yes
+					}
+				}
+			}
+			634 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			518 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RIM_industrial_effort_plans
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = RIM_continue_plan }
+		prerequisite = { focus = RIM_fortification_effort }
+		x = 2
+		y = 6
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				NOT = {
+					any_owned_state = {
+						is_controlled_by = ROOT
+						free_building_slots = {
+							building = arms_factory
+							size > 2
+							include_locked = yes
+						}
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					arms_factory > 0
+					free_building_slots = {
+						building = arms_factory
+						size > 3
+						include_locked = yes
+					}
+					is_on_continent = europe
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					arms_factory > 0
+					free_building_slots = {
+						building = arms_factory
+						size > 3
+						include_locked = yes
+					}
+					is_on_continent = europe
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							arms_factory > 0
+							free_building_slots = {
+								building = arms_factory
+								size > 1
+								include_locked = yes
+							}
+							is_on_continent = europe
+						}
+					}					
+				}
+				random_owned_controlled_state = {
+					limit = {
+						arms_factory > 0
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+						is_on_continent = europe
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = arms_factory
+						level = 3
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						arms_factory > 0
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+						is_on_continent = europe
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = arms_factory
+						level = 3
+						instant_build = yes
+					}
+				}			
+			}
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							free_building_slots = {
+								building = arms_factory
+								size > 1
+								include_locked = yes
+							}
+							is_on_continent = europe
+						}
+					}					
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = arms_factory
+						level = 3
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = arms_factory
+						level = 3
+						instant_build = yes
+					}
+				}			
+			}
+		}
+	}
+
+	focus = {
+		id = RIM_rubber_reserves
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = RIM_fortification_effort }
+		prerequisite = { focus = RIM_prospect_for_oil }
+		available = {
+			controls_state = 523
+		}
+		x = 4
+		y = 6
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+		completion_reward = {
+			add_resource = {
+				type = rubber
+				amount = 8
+				state = 523 #Papua
+			}
+		}
+	}
+
+	focus = {
+		id = RIM_extra_tech_slot_2
+		icon = GFX_focus_research
+		text = extra_tech_slot
+		prerequisite = { focus = RIM_rubber_reserves }
+		prerequisite = { focus = RIM_industrial_effort_plans }
+		prerequisite = { focus = RIM_expand_building_space }
+		available = {
+			num_of_factories > 70
+		}
+		x = 4
+		y = 7
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = RIM_nuclear_effort
+		icon = GFX_focus_wonderweapons
+		mutually_exclusive = { focus = RIM_jet_effort }
+		prerequisite = { focus = RIM_extra_tech_slot_2 }
+		x = 2
+		y = 8
+		cost = 10
+
+		available_if_capitulated = yes
+
+		#ai_will_do = {
+		#	factor = 1
+		#}
+		completion_reward = {
+			add_tech_bonus = {
+				name = FRA_nuclear_effort
+				bonus = 0.5
+				category = nuclear
+			}
+			news_event = { id = news.174 } 
+		}
+	}
+
+	focus = {
+		id = RIM_jet_effort
+		mutually_exclusive = { focus = RIM_nuclear_effort }
+		icon = GFX_focus_rocketry
+		prerequisite = { focus = RIM_extra_tech_slot_2 }
+		x = 6
+		y = 8
+		cost = 10
+
+		available_if_capitulated = yes
+
+		#ai_will_do = {
+		#	factor = 1
+		#}
+		completion_reward = {
+			air_experience = 25
+			add_tech_bonus = {
+				name = FRA_jet_effort
+				bonus = 0.5
+				uses = 4
+				category = jet_technology
+			}
+		}
+	}
+
+	focus = {
+		id = RIM_finalize_the_plan
+		icon = GFX_goal_generic_military_deal
+		prerequisite = {
+			focus = RIM_jet_effort
+			focus = RIM_nuclear_effort
+		}
+		x = 4
+		y = 9
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = finalize_plan
+		}
+	}
+
+	focus = {
+		id = RIM_prospect_for_steel
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = RIM_expand_building_space }
+		prerequisite = { focus = RIM_overseas_infrastructure }
+		available = {
+			RIM = {
+				controls_state = 520 
+			}
+		}
+		bypass = {
+			520 = {
+				has_state_flag = rimmy_steel_discovered
+			}
+		}
+		
+		x = 7
+		y = 7
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+			add_resource = {
+				type = steel
+				amount = 20
+				state = 520
+			}
+			520 = {
+				set_state_flag = rimmy_steel_discovered
+			}
+		}
+	}
+
+	#Army Tree
+
+	focus = {
+		id = RIM_army_primacy
+		icon = GFX_goal_generic_axis_build_infantry
+		x = 15
+		y = 0
+		cost = 10
+		ai_will_do = {
+			factor = 0.25
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			random_owned_controlled_state = {
+				limit = {
+					arms_factory > 0
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					arms_factory > 0
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							arms_factory > 0
+							free_building_slots = {
+								building = arms_factory
+								size > 0
+								include_locked = yes
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}				
+			}
+
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = RIM_isp_choice
+		icon = GFX_focus_isp
+		prerequisite = { focus = RIM_army_primacy }
+		mutually_exclusive = { focus = RIM_drew_choice }
+		x = 17
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = isp_choice
+			set_country_flag = isp_chosen
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = RIM_Isorrow_Productions
+		}
+	}
+
+	focus = {
+		id = RIM_drew_choice
+		icon = GFX_focus_drew_durnil
+		prerequisite = { focus = RIM_army_primacy }
+		mutually_exclusive = { focus = RIM_isp_choice }
+		x = 13
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = drew_choice
+			set_country_flag = drew_chosen
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = RIM_Drew_Durnil
+		}
+	}
+
+	#DrewPath
+
+	focus = {
+		id = RIM_fortification_focus
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = RIM_drew_choice }
+		x = 11
+		y = 2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = FRA_fortification_focus
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = RIM_Thomas_The_Engineer
+		}
+	}
+
+	focus = {
+		id = RIM_artillery_focus
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = RIM_drew_choice }
+		x = 13
+		y = 2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 50
+			add_ideas = artillery_only
+			add_tech_bonus = {
+				name = FRA_artillery_focus
+				bonus = 0.5
+				uses = 10
+				category = artillery
+			}
+		}
+	}
+	focus = {
+		id = RIM_infantry_focus
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = RIM_artillery_focus }
+		prerequisite = { focus = RIM_fortification_focus }
+		x = 12
+		y = 3
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 10
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 0.5
+				uses = 2
+				category = infantry_weapons
+			}
+		}
+	}
+	focus = {
+		id = RIM_special_forces
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = RIM_infantry_focus }
+		x = 11
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = special_bonus
+				bonus = 0.5
+				uses = 1
+				technology = paratroopers
+				technology = paratroopers2
+				technology = marines
+			}
+			add_tech_bonus = {
+				name = special_bonus
+				ahead_reduction = 1
+				uses = 1
+				technology = tech_mountaineers2
+				technology = marines2
+			}
+		}
+	}
+	focus = {
+		id = RIM_heavy_armor_focus
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = RIM_infantry_focus }
+		x = 13
+		y = 4
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = FRA_heavy_armor_focus
+				bonus = 0.5
+				uses = 3
+				category = cat_heavy_armor
+			}
+		}
+	}
+
+	focus = {
+		id = RIM_landing_craft
+		icon = GFX_goal_generic_amphibious_assault
+		prerequisite = {
+			focus = RIM_heavy_armor_focus
+			focus = RIM_special_forces
+			focus = RIM_special_forces_isp
+		}
+		x = 15
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ITA_marines_and_landing_craft
+				bonus = 0.5
+				uses = 2
+				technology = transport
+				technology = landing_craft
+				technology = tank_landing_craft
+			}
+		}
+	}
+	focus = {
+		id = RIM_doctrine_effort
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = RIM_heavy_armor_focus }
+		prerequisite = { focus = RIM_special_forces }
+		x = 12
+		y = 5
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.75
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+
+	#ISPtree
+
+	focus = {
+		id = RIM_armor_effort
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = RIM_isp_choice }
+		x = 16
+		y = 2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 0.7
+				uses = 3
+				category = armor
+			}
+		}
+	}
+
+	focus = {
+		id = RIM_mechanization_effort
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = RIM_isp_choice }
+		x = 18
+		y = 2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				ahead_reduction = 0.5
+				uses = 2
+				category = motorized_equipment
+			}
+		}
+	}
+	focus = {
+		id = RIM_light_medium_armor
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = RIM_mechanization_effort }
+		prerequisite = { focus = RIM_armor_effort }
+		x = 17
+		y = 3
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = FRA_light_medium_armor
+				bonus = 0.7
+				uses = 3
+				category = cat_light_armor
+				category = cat_medium_armor
+			}
+		}
+	}
+	focus = {
+		id = RIM_special_forces_isp
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = RIM_light_medium_armor }
+		x = 17
+		y = 4
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = special_forces
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 0.5
+				uses = 1
+				technology = paratroopers
+				technology = paratroopers2
+				technology = marines
+				technology = marines2
+				technology = tech_mountaineers2
+			}
+		}
+	}
+
+	focus = {
+		id = RIM_bicycle_battalions
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = RIM_special_forces_isp }
+		x = 17
+		y = 5
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			set_technology = { bicycle_infantry = 1 }
+		}
+	}
+
+	#AIRSHIT
+
+	focus = {
+		id = RIM_aviation_effort
+		icon = GFX_goal_generic_build_airforce
+		x = 24
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		complete_tooltip = {
+			air_experience = 25
+			if = { limit = { has_country_flag = aviation_effort_AB }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}			
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = air_doctrine
+			}			
+		}
+
+		completion_reward = {
+			air_experience = 25
+
+			if = {
+				limit = {
+					capital_scope = {
+						NOT = {
+							free_building_slots = {
+								building = air_base
+								size > 1
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = RIM_tactical_air_effort
+		icon = GFX_goal_generic_CAS
+		prerequisite = { focus = RIM_aviation_effort }
+		mutually_exclusive = { focus = RIM_strategic_air_effort }
+		x = 22
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 0.25
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = op_dest_bonus
+				bonus = 0.5
+				uses = 2
+				category = battlefield_support_tree
+			}
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 0.5
+				uses = 2
+				category = tactical_bomber
+				category = cas_bomber			
+			}
+		}
+	}
+
+	focus = {
+		id = RIM_strategic_air_effort
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = RIM_aviation_effort }
+		mutually_exclusive = { focus = RIM_tactical_air_effort }
+		x = 26
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			# Balance research bonus for 2 techs in battlefield_support_tree
+			add_tech_bonus = {
+				name = strat_dest_bonus
+				bonus = 0.5
+				uses = 2
+				category = battlefield_support_tree
+			}
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 0.5
+				uses = 1
+				category = cat_strategic_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = RIM_long_range_escorts
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = RIM_tactical_air_effort focus = RIM_strategic_air_effort }
+		x = 24
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = GER_long_range_escorts
+				bonus = 0.5
+				uses = 2
+				category = cat_heavy_fighter
+			}
+		}
+	}
+
+	focus = {
+		id = RIM_air_doctrine
+		icon = GFX_goal_generic_air_doctrine
+	 	prerequisite = { 
+	 		focus = RIM_strategic_air_effort
+	 		focus = RIM_tactical_air_effort
+	 	}
+		x = 24
+		y = 3
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			air_experience = 50
+
+			add_tech_bonus = {
+				name = FRA_air_doctrine
+				bonus = 0.5
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = RIM_fighter_focus
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = RIM_tactical_air_effort }
+		x = 22
+		y = 2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = FRA_fighter_focus
+				bonus = 0.5
+				uses = 2
+				category = light_fighter
+			}
+		}
+	}
+
+	focus = {
+		id = RIM_naval_bomber_focus
+		icon = GFX_goal_generic_air_naval_bomber
+	 	prerequisite = { focus = RIM_fighter_focus }
+		x = 22
+		y = 3
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = FRA_naval_bomber_focus
+				bonus = 0.5
+				uses = 2
+				category = naval_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = RIM_bomber_focus
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = RIM_strategic_air_effort }
+		x = 26
+		y = 2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = FRA_bomber_focus
+				bonus = 0.5
+				uses = 2
+				category = tactical_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = RIM_heavy_bomber_focus
+		icon = GFX_goal_generic_occupy_start_war
+		prerequisite = { focus = RIM_bomber_focus }
+	 	x = 26
+		y = 3
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = FRA_heavy_bomber_focus
+				bonus = 0.5
+				uses = 2
+				category = cat_strategic_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = RIM_allow_kamikazes
+		icon = GFX_goal_generic_CAS
+		prerequisite = { focus = RIM_heavy_bomber_focus }
+		prerequisite = { focus = RIM_air_doctrine }
+	 	x = 25
+		y = 4
+		cost = 10
+
+        available_if_capitulated = yes
+
+		completion_reward = {
+				set_rule = { can_use_kamikaze_pilots = yes }
+			}
+		}
+
+	#NavalTree
+
+	focus = {
+		id = RIM_begin_building
+		icon = GFX_goal_generic_build_navy
+		x = 21
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			navy_experience = 100
+			random_owned_controlled_state = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							dockyard > 0
+							free_building_slots = {
+								building = dockyard
+								size > 0
+								include_locked = yes
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}				
+			}
+
+			add_tech_bonus = {
+				name = naval_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = RIM_capital_ship_focus
+		icon = GFX_goal_generic_navy_battleship
+	 	mutually_exclusive = { focus = RIM_carrier_focus }
+	 	prerequisite = { focus = RIM_begin_building }
+		x = 19
+		y = 6
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = FRA_capital_ship_focus
+				bonus = 0.5
+				uses = 2
+				category = bb_tech
+				category = bc_tech
+			}
+		}
+	}
+
+	focus = {
+		id = RIM_carrier_focus
+		icon = GFX_goal_generic_navy_carrier
+	 	mutually_exclusive = { focus = RIM_capital_ship_focus }
+	 	prerequisite = { focus = RIM_begin_building }
+		x = 23
+		y = 6
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = FRA_carrier_focus
+				bonus = 0.5
+				uses = 2
+				category = cv_tech
+			}
+		}
+	}
+
+	focus = {
+		id = RIM_improved_screen_ships
+		icon = GFX_goal_generic_navy_cruiser
+	 	prerequisite = { focus = RIM_begin_building }
+		x = 17
+		y = 6
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = FRA_improved_screen_ships
+				bonus = 0.5
+				uses = 2
+				category = dd_tech
+				category = cl_tech
+			}
+		}
+	}
+
+	focus = {
+		id = RIM_the_ultimate_battleship
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = RIM_improved_screen_ships }
+		prerequisite = { focus = RIM_capital_ship_focus }
+		x = 17
+		y = 7
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = JAP_the_ultimate_battleship
+				bonus = 0.75
+				uses = 5
+				category = shbb_tech	
+			}
+		}
+	}
+
+	focus = {
+		id = RIM_naval_doctrine
+		icon = GFX_goal_generic_navy_doctrines_tactics
+	 	prerequisite = { 
+	 		focus = RIM_carrier_focus
+	 		focus = RIM_capital_ship_focus
+	 		focus = RIM_improved_screen_ships
+	 	}
+		x = 21
+		y = 7
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = FRA_naval_doctrine
+				bonus = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = RIM_first_air_fleet
+		icon = GFX_goal_generic_navy_carrier
+		prerequisite = { focus = RIM_carrier_focus }
+		x = 23
+		y = 7
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		JAP = { has_completed_focus = JAP_first_air_fleet }
+		}
+
+		completion_reward = {
+			add_ideas = JAP_first_air_fleet
+		}
+	}
+
+	focus = {
+		id = RIM_modern_escorts
+		icon = GFX_goal_generic_navy_anti_submarine
+		prerequisite = { focus = RIM_the_ultimate_battleship }
+		x = 17
+		y = 8
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = JAP_modern_escorts
+				bonus = 0.5
+				uses = 2
+				category = dd_tech	
+			}
+		}
+	}
+
+	focus = {
+		id = RIM_u_boat_effort
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = RIM_capital_ship_focus }
+		x = 19
+		y = 7
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+			navy_experience = 75
+			every_state = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = dockyard
+					level = 5
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = GER_u_boat_effort
+				bonus = 0.5
+				uses = 3
+				category = ss_tech
+			}
+		}
+		
+		completion_reward = {
+			navy_experience = 25
+			random_owned_controlled_state = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = dockyard
+					level = 5
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = GER_u_boat_effort
+				bonus = 0.5
+				uses = 3
+				category = ss_tech
+			}
+		}
+	}
+
+	focus = {
+		id = RIM_waves_focus
+		prerequisite = { focus = RIM_u_boat_effort }
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 19
+		y = 8
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = naval_doc_bonus
+				bonus = 0.5
+				uses = 3
+				category = naval_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = RIM_convoy_focus
+		prerequisite = { focus = RIM_waves_focus }
+		prerequisite = { focus = RIM_modern_escorts }
+		icon = GFX_goal_generic_navy_cruiser
+		x = 18
+		y = 9
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = british_convoy_discount
+		}
+	}
+
+	focus = {
+		id = RIM_naval_doctrine_2
+		icon = GFX_goal_generic_navy_doctrines_tactics
+	 	prerequisite = { focus = RIM_naval_doctrine }
+		x = 21
+		y = 8
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = FRA_naval_doctrine
+				bonus = 0.5
+				uses = 3
+				category = naval_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = RIM_pacific_fleet
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = RIM_first_air_fleet }
+		prerequisite = { focus = RIM_naval_doctrine_2 }
+		x = 22
+		y = 9
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = ITA_atlantic_fleet
+				bonus = 0.5
+				uses = 1
+				category = cv_tech
+			}
+			add_tech_bonus = {
+				name = ITA_atlantic_fleet
+				bonus = 0.5
+				uses = 1
+				category = bb_tech
+			}
+		}
+	}
+
+	focus = {
+		id = RIM_bureau_of_rimmynautics
+		icon = GFX_goal_generic_air_naval_bomber
+		prerequisite = { focus = RIM_first_air_fleet }
+		x = 23
+		y = 8
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = USA_bureau_of_aeronautics
+				bonus = 0.5
+				uses = 2
+				category = naval_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = RIM_advanced_mahanian_doctrine
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = RIM_convoy_focus }
+		x = 18
+		y = 10
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = USA_advanced_mahanian_doctrine
+				bonus = 0.7
+				category = base_strike_main
+			}
+		}
+	}
+
+	#Political
+
+	focus = {
+		id = RIM_lookover_government
+		icon = GFX_goal_generic_national_unity
+
+		x = 37
+		y = 0
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+
+	#KeepRimmytree
+	focus = {
+		id = RIM_keep_the_kaiserim
+		icon = GFX_focus_keep_kaiserim
+		prerequisite = { focus = RIM_lookover_government }
+        x = 36
+		y = 1
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 250
+		}
+	}
+
+	focus = {
+		id = RIM_siam_friend
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = RIM_keep_the_kaiserim }
+		mutually_exclusive = { focus = RIM_invade_siam }
+		x = 30
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			country_exists = SIA
+			NOT = {
+				has_war_with = SIA
+			}
+		}
+		bypass = {
+			NOT = { country_exists = SIA }
+		}
+		completion_reward = {
+			SIA = {
+				add_opinion_modifier = { target = RIM modifier = rim_diplomacy_focus }
+				if = {
+					limit = { ROOT = { has_government = fascism } }
+					add_ideas = fascist_influence
+				}
+				if = {
+					limit = { ROOT = { has_government = democratic } }
+					add_ideas = democratic_influence
+				}
+				if = {
+					limit = { ROOT = { has_government = communism } }
+					add_ideas = communist_influence
+				}
+				if = {
+					limit = { ROOT = { has_government = neutrality } }
+					add_ideas = rimmy_influence
+				}
+				country_event = { id = generic.1 }
+			}
+		}
+	}
+
+	focus = {
+		id = RIM_invade_siam
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = RIM_keep_the_kaiserim }
+		mutually_exclusive = { focus = RIM_siam_friend }
+		available = {
+			NOT = { is_in_faction_with = SIA }
+			NOT = { has_war_with = SIA }
+			SIA = { NOT = { is_puppet_of = RIM } }
+			country_exists = SIA
+		}
+		will_lead_to_war_with = SIA
+		x = 32
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = SIA
+				generator = { 289 } # Siam
+			}
+		}
+	}
+
+	focus = {
+		id = RIM_bokoen_choice
+		icon = GFX_focus_bokoen_choice
+		prerequisite = { focus = RIM_keep_the_kaiserim }
+		mutually_exclusive = { focus = RIM_alex_choice }
+		x = 36
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = bokoen_choice
+			remove_unit_leader = 909
+			create_corps_commander = {
+	            name = "Bokoen1"
+	            picture = "Portrait_Rimmy_Bokoen.dds"
+	             traits = { infantry_officer }
+	             skill = 5
+	             attack_skill = 3
+	             defense_skill = 2
+	             planning_skill = 1
+	             logistics_skill = 5
+	            }
+	        }
+	    }
+
+	focus = {
+		id = RIM_alex_choice
+		icon = GFX_focus_alex_choice
+		prerequisite = { focus = RIM_keep_the_kaiserim }
+		mutually_exclusive = { focus = RIM_bokoen_choice }
+		x = 34
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = alex_choice
+		}
+	}
+
+	focus = {
+		id = RIM_denounce_denmark
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = RIM_alex_choice }
+		available = {
+			NOT = { is_in_faction_with = DEN }
+			NOT = { has_war_with = DEN }
+			DEN = { NOT = { is_puppet_of = DEN } }
+			country_exists = DEN
+		}
+		x = 34
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			RIM = {
+				add_opinion_modifier = { target = DEN modifier = rim_denounce_focus }
+			}
+			DEN = {
+				add_opinion_modifier = { target = RIM modifier = rim_denounce_target }
+			}
+		}
+	}
+
+	focus = {
+		id = RIM_ultimatum_denmark
+		icon = GFX_goal_generic_attack_allies
+		prerequisite = { focus = RIM_denounce_denmark }
+		available = {
+			NOT = { is_in_faction_with = DEN }
+			NOT = { has_war_with = DEN }
+			DEN = { NOT = { is_puppet_of = DEN } }
+			country_exists = DEN
+		}
+		x = 34
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			DEN = { country_event = rimmy.8 }
+		}
+	}
+
+	focus = {
+		id = RIM_demand_west_papua
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = RIM_ultimatum_denmark }
+		available = {
+			NOT = { is_in_faction_with = INS }
+			NOT = { has_war_with = INS }
+			DEN = { NOT = { is_puppet_of = INS } }
+			country_exists = INS
+		}
+		x = 34
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			INS = { country_event = rimmy.13 }
+		}
+	}
+
+	focus = {
+		id = RIM_denmark_friend
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = RIM_bokoen_choice }
+		x = 36
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			country_exists = DEN
+			NOT = {
+				has_war_with = DEN
+			}
+		}
+		bypass = {
+			NOT = { country_exists = DEN }
+		}
+		completion_reward = {
+			DEN = {
+				add_opinion_modifier = { target = DEN modifier = rim_diplomacy_focus }
+				if = {
+					limit = { ROOT = { has_government = fascism } }
+					add_ideas = fascist_influence
+				}
+				if = {
+					limit = { ROOT = { has_government = democratic } }
+					add_ideas = democratic_influence
+				}
+				if = {
+					limit = { ROOT = { has_government = communism } }
+					add_ideas = communist_influence
+				}
+				if = {
+					limit = { ROOT = { has_government = neutrality } }
+					add_ideas = rimmy_influence
+				}
+				country_event = { id = generic.1 }
+			}
+		}
+	}
+
+	focus = {
+		id = RIM_demand_singapore
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = RIM_denmark_friend }
+		available = {
+			NOT = { is_in_faction_with = MAL }
+			NOT = { has_war_with = MAL }
+			DEN = { NOT = { is_puppet_of = MAL } }
+			country_exists = MAL
+		}
+		x = 36
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			MAL = { country_event = rimmy.16 }
+		}
+	}
+
+	focus = {
+		id = RIM_demand_south_island
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = RIM_demand_singapore }
+		available = {
+			NOT = { is_in_faction_with = NZL }
+			NOT = { has_war_with = NZL }
+			DEN = { NOT = { is_puppet_of = NZL } }
+			country_exists = NZL
+		}
+		x = 36
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			NZL = { country_event = rimmy.19 }
+		}
+	}
+
+	focus = {
+		id = RIM_expand_building_space
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = RIM_prospect_for_oil }
+		prerequisite = { focus = RIM_overseas_infrastructure }
+		x = 6
+		y = 6
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			285 = {
+				add_extra_state_shared_building_slots = 5
+			}
+			517 = {
+				add_extra_state_shared_building_slots = 3
+			}
+			521 = {
+				add_extra_state_shared_building_slots = 4
+			}
+			674 = {
+				add_extra_state_shared_building_slots = 4
+			}
+			520 = {
+				add_extra_state_shared_building_slots = 4
+			}
+		}
+	
+	
