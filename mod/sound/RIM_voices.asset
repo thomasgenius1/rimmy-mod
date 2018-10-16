@@ -1,0 +1,165 @@
+category = {
+           name = "Voices"
+           soundeffects = {
+	                      RIM_infantry_idle
+	                      RIM_infantry_neutral_combat
+	                      RIM_infantry_positive_combat
+	                      RIM_infantry_retreat
+	                      RIM_infantry_move_out
+	                    }
+compressor = {
+	         enabled = yes
+	         pregain = 3.0 #0
+	         postgain = 3.0 #2
+	         ratio = 10.0
+	         threshold = -10.0
+	         attacktime = 0.030
+	         releasetime = 0.2 #1,2
+             }
+}
+
+soundeffect = {
+              name = "RIM_infantry_idle"
+              sounds = {
+                       sound = RIM_Idle_01
+                       sound = RIM_Idle_02
+		               sound = RIM_Idle_03
+                       }
+	          max_audible = 1
+	          max_audible_behaviour = fail
+	          volume = 1.0
+	          volume_random_offset = { 0.0 -0.15 }
+	          playbackrate_random_offset = { 0.0 -0.15 }
+}
+
+soundeffect = {
+              name = "RIM_infantry_neutral_combat"
+              sounds = {
+                       sound = RIM_Combat_01
+                       sound = RIM_Combat_02
+                       sound = RIM_Combat_03
+                       }
+	          max_audible = 1
+	          max_audible_behaviour = fail
+	          volume = 1.0
+	          volume_random_offset = { 0.0 -0.15 }
+	          playbackrate_random_offset = { 0.0 -0.15 }
+}
+
+soundeffect = {
+              name = "RIM_infantry_positive_combat"
+              sounds = {
+                       sound = RIM_Winning_01
+                       sound = RIM_Winning_02
+                       sound = RIM_Winning_03
+                       }
+	          max_audible = 1
+	          max_audible_behaviour = fail
+	          volume = 1.0
+	          volume_random_offset = { 0.0 -0.15 }
+	          playbackrate_random_offset = { 0.0 -0.15 }
+}
+
+soundeffect = {
+              name = "RIM_infantry_retreat"
+              sounds = {
+                       sound = RIM_Retreat_01
+                       sound = RIM_Retreat_02
+		               sound = RIM_Retreat_03
+                       }
+	          max_audible = 1
+	          max_audible_behaviour = fail
+	          volume = 1.0
+	          volume_random_offset = { 0.0 -0.15 }
+	          playbackrate_random_offset = { 0.0 -0.15 }
+}
+
+soundeffect = {
+              name = "RIM_infantry_move_out"
+              sounds = {
+                       sound = RIM_Move_01
+		               sound = RIM_Move_02
+		               sound = RIM_Move_03
+                       }
+	          max_audible = 1
+	          max_audible_behaviour = fail
+	          volume = 1.0
+	          volume_random_offset = { 0.0 -0.15 }
+	          playbackrate_random_offset = { 0.0 -0.15 }
+}
+
+sound = {
+	    name = "RIM_Idle_01"
+	    file = "RIM/RIM_Idle_01.wav"
+}
+
+sound = {
+	    name = "RIM_Idle_02"
+	    file = "RIM/RIM_Idle_02.wav"
+}
+
+sound = {
+	    name = "RIM_Idle_03"
+	    file = "RIM/RIM_Idle_03.wav"
+}
+
+sound = {
+	    name = "RIM_Combat_01"
+	    file = "RIM/RIM_Combat_01.wav"
+}
+
+sound = {
+	    name = "RIM_Combat_02"
+	    file = "RIM/RIM_Combat_02.wav"
+}
+
+sound = {
+	    name = "RIM_Combat_03"
+	    file = "RIM/RIM_Combat_03.wav"
+}
+
+sound = {
+	    name = "RIM_Move_01"
+	    file = "RIM/RIM_Move_01.wav"
+}
+
+sound = {
+	    name = "RIM_Move_02"
+	    file = "RIM/RIM_Move_02.wav"
+}
+
+sound = {
+	    name = "RIM_Move_03"
+	    file = "RIM/RIM_Move_03.wav"
+}
+
+sound = {
+	    name = "RIM_Retreat_01"
+	    file = "RIM/RIM_Retreat_01.wav"
+}
+
+sound = {
+	    name = "RIM_Retreat_02"
+	    file = "RIM/RIM_Retreat_02.wav"
+}
+
+sound = {
+	    name = "RIM_Retreat_03"
+	    file = "RIM/RIM_Retreat_03.wav"
+}
+
+sound = {
+	    name = "RIM_Winning_01"
+	    file = "RIM/RIM_Winning_01.wav"
+}
+
+sound = {
+	    name = "RIM_Winning_02"
+	    file = "RIM/RIM_Winning_02.wav"
+}
+
+sound = {
+	    name = "RIM_Winning_03"
+	    file = "RIM/RIM_Winning_03.wav"
+}
+

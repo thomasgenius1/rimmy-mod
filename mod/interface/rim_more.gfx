@@ -1,0 +1,6 @@
+spriteTypes = {	
+	          SpriteType = {
+		                   name = "GFX_RIM_infantry_weapons1_medium"
+		                   texturefile = "gfx/interface/technologies/RIM_infantry_weapons1_medium.dds"
+	                       }}
+	          
