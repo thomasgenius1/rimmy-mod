@@ -1,0 +1,182 @@
+ideas = {
+	    theorist = {
+	               RIM_Sir_Rimmy_Theorist = {
+	               picture = idea_sir_rimmy_theorist
+	               allowed = { original_tag = RIM }
+	               research_bonus = { land_doctrine = 0.07 }
+	               traits = { military_theorist }
+	               }
+	               RIM_Thomas_Luftwatte = {
+	               picture = idea_thomas_luftwatte
+	               allowed = { original_tag = RIM }
+	               research_bonus = { air_doctrine = 0.07 }
+	               traits = { air_warfare_theorist }
+	               }
+	               RIM_Oswald_Moseley = {
+	               picture = idea_oswald_moseley
+	               allowed = { original_tag = RIM }
+	               research_bonus = { naval_doctrine = 0.07 }
+	               traits = { naval_theorist }
+	               }
+	               RIM_Thomas_Rushinton = {
+	               picture = idea_thomas_rushinto
+	               allowed = { original_tag = RIM }
+	               research_bonus = { cat_mobile_warfare = 0.10 }
+	               traits = { mobile_warfare_expert }
+	               }
+	               RIM_Thomas_Blitzinton = {
+	               picture = idea_thomas_blitzinton
+	               allowed = { original_tag = RIM }
+	               research_bonus = { land_doctrine = 0.07 }
+	               traits = { blitzkrieg_theorist }
+	               }
+	               RIM_Nuclear_Ghandi = {
+	               picture = idea_nuclear_ghandi
+	               allowed = { original_tag = RIM }
+	               research_bonus = { nuclear = 0.10 }
+	               traits = { nuclear_scientist }
+	               }
+	    }
+	    high_command = {
+	                   RIM_Thomas_Closinton = {
+	                   picture = thomas_closinton
+	                   allowed = { original_tag = RIM }
+	                   traits = { air_close_air_support_2 }
+	                   ai_will_do = { factor = 1 }
+	                   }
+	                   RIM_Thomas_Sneakinton = {
+	                   picture = thomas_sneakinton
+	                   allowed = { original_tag = RIM }
+	                   traits = { navy_screen_2 }
+	                   ai_will_do = { factor = 1 }
+	                   }
+	                   RIM_Thomas_Chiefton = {
+	                   picture = thomas_chiefton
+	                   allowed = { original_tag = RIM }
+	                   traits = { army_infantry_2 }
+	                   ai_will_do = { factor = 1 }
+	                   }
+	                   RIM_Thomas_Haltinton = {
+	                   picture = thomas_haltinton
+	                   allowed = { original_tag = RIM }
+	                   traits = { army_entrenchment_2 }
+	                   ai_will_do = { factor = 1 }
+	                   }
+	                   RIM_August_Von_Mackensen = {
+	                   picture = august_von_mackensen
+	                   allowed = { original_tag = RIM }
+	                   traits = { army_armored_3 }
+	                   ai_will_do = { factor = 1 }
+	                   }
+	                   RIM_Thomas_Savinton = {
+	                   picture = thomas_savinton
+	                   allowed = { original_tag = RIM }
+	                   traits = { army_logistics_2 }
+	                   ai_will_do = { factor = 1 }
+	                   }
+	                   RIM_Rimmy_Beer = {
+	                   picture = rimmy_beer
+	                   allowed = { original_tag = RIM }
+	                   traits = { air_airborne_2 }
+	                   ai_will_do = { factor = 1 }
+	                   }
+	                   RIM_Thomas_Convinton = {
+	                   picture = thomas_convinton
+	                   allowed = { original_tag = RIM }
+	                   traits = { navy_fleet_logistics_2 }
+	                   ai_will_do = { factor = 1 }
+	                   }
+	    }
+	    air_chief = {
+	                RIM_Thomas_Comandinton = {
+	                picture = thomas_comandinton
+	                allowed = { original_tag = RIM }
+	                traits = { air_chief_ground_support_2 }
+	                ai_will_do = { factor = 1 }
+	                }
+	                RIM_Thomas_Eagleton = {
+	                picture = thomas_eagleton
+	                allowed = { original_tag = RIM }
+	                traits = { air_chief_reform_3 }
+	                ai_will_do = { factor = 1 }
+	                }
+	                RIM_Thomas_Nightinton = {
+	                picture = thomas_nightinton
+	                allowed = { original_tag = RIM }
+	                traits = { air_chief_night_operations_2 }
+	                ai_will_do = { factor = 1 }
+	                }
+	                RIM_Thomas_Dropinton = {
+	                picture = thomas_dropinton
+	                allowed = { original_tag = RIM }
+	                traits = { air_chief_safety_2 }
+	                ai_will_do = { factor = 1 }
+	                }
+	    }
+	    navy_chief = {
+	                 RIM_Thomas_Sharkinton = {
+	                 picture = thomas_sharkinton
+	                 allowed = { original_tag = RIM }
+	                 traits = { navy_chief_decisive_battle_2 }
+	                 ai_will_do = { factor = 1 }
+	                 }
+	                 RIM_Thomas_The_Pirate = {
+	                 picture = thomas_the_pirate
+	                 allowed = { original_tag = RIM }
+	                 traits = { navy_chief_commerce_raiding_2 }
+	                 ai_will_do = { factor = 1 }
+	                 }
+	                 RIM_Thomas_Thunderwave = {
+	                 picture = thomas_thunerwave
+	                 allowed = { original_tag = RIM }
+	                 traits = { navy_chief_reform_2 }
+	                 ai_will_do = { factor = 1 }
+	                 }
+	                 RIM_Thomas_Airvinceantin = {
+	                 picture = thomas_airvinceantin
+	                 allowed = { original_tag = RIM }
+	                 traits = { navy_chief_naval_aviation_2 }
+	                 ai_will_do = { factor = 1 }
+	                 }
+	    }
+	    tank_manufacturer = {
+	                        RIM_Bethesda_Tanks = {
+	                        picture = idea_bethesda_tanks
+	    		            allowed = { original_tag = RIM }
+			                research_bonus = { armor = 0.10 }
+			                traits = { fast_tank_manufacturer }
+			                ai_will_do = { factor = 1 }
+		                    }
+	                        RIM_Hearts_Of_Iron_Four = {
+	                        picture = hoi4tanks
+	    		            allowed = { original_tag = RIM }
+			                research_bonus = { armor = 0.10 }
+			                traits = { medium_tank_manufacturer }
+			                ai_will_do = { factor = 1 }
+		                    }
+	                        RIM_EU4 = {
+	                        picture = idea_eu4
+	    		            allowed = { original_tag = RIM }
+			                research_bonus = { armor = 0.10 }
+			                traits = { heavy_tank_manufacturer }
+			                ai_will_do = { factor = 1 }
+		                    }
+		}
+		materiel_manufacturer = {
+		                        RIM_Downunder_Industries = {
+		                        picture = downunder_industries
+			                    allowed = { original_tag = RIM }
+			                    available = { 
+			                    research_bonus = { artillery = 0.10 }
+			                    equipment_bonus = { artillery = { build_cost_ic = -0.025 instant = yes } }
+			                    traits = { artillery_manufacturer }
+			                    ai_will_do = { factor = 1 }
+		                        }
+		                        
+			                    
+		                        
+			                    
+		                        
+			                    
+			                    
+	                       
