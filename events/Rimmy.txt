@@ -1,0 +1,528 @@
+###########################
+# Rimmy Events
+###########################
+
+add_namespace = rimmy
+
+country_event = {
+	id = rimmy.1
+	title = rimmy.1.t
+	desc = rimmy.1.d
+	picture = GFX_report_event_generic_funeral
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = RIM
+		has_country_flag = isp_chosen
+	}
+	
+	option = { 	
+		name = rimmy.1.a
+		ai_chance = {
+			factor = 100
+		}		
+		custom_effect_tooltip = startstory_tooltip_tt
+		set_country_flag = leon_dead
+		remove_unit_leader = 900
+	}
+}
+
+country_event = {
+	id = rimmy.2
+	title = rimmy.2.t
+	desc = rimmy.2.d
+	picture = GFX_report_event_generic_funeral
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = RIM
+		has_country_flag = leon_dead
+	}
+	
+	option = { 	
+		name = rimmy.2.a
+		ai_chance = {
+			factor = 100
+		}		
+		add_timed_idea = { idea = leon_memories days = 365 }
+		custom_effect_tooltip = pathtosenor_tooltip_tt
+		set_country_flag = leon_funeral
+	}
+}
+
+country_event = {
+	id = rimmy.3
+	title = rimmy.3.t
+	desc = rimmy.3.d
+	picture = GFX_report_event_degrelle
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = RIM
+		has_country_flag = leon_funeral
+	}
+	
+	option = { 	
+		name = rimmy.3.a
+		ai_chance = {
+			factor = 100
+		}		
+		custom_effect_tooltip = degrelle_tooltip_tt
+		set_country_flag = senor_appeared
+	}
+}
+
+country_event = {
+	id = rimmy.4
+	title = rimmy.4.t
+	desc = rimmy.4.d
+	picture = GFX_news_event_gathering_protest
+
+	is_triggered_only = yes
+
+ 	trigger = {
+		tag = RIM
+		has_country_flag = drew_chosen
+	}
+	
+	option = { 	
+		name = rimmy.4.a
+		ai_chance = {
+			factor = 80
+		}		
+		custom_effect_tooltip = durnildegrelle_tooltip_tt
+		set_country_flag = missed_scandal
+	}
+	
+	option = { 	
+		name = rimmy.4.b
+		ai_chance = {
+			factor = 20
+		}		
+		custom_effect_tooltip = durnildegrelledenied_tooltip_tt
+		set_country_flag = government_scandal
+		add_ideas = government_scandal
+	}
+}
+
+country_event = {
+	id = rimmy.5
+	title = rimmy.5.t
+	desc = rimmy.5.d
+	picture = GFX_news_event_gathering_protest
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = RIM
+		has_country_flag = missed_scandal
+	}
+	
+	option = { 	
+		name = rimmy.5.a
+		ai_chance = {
+			factor = 50
+		}		
+		set_country_flag = admitted_scandal
+		custom_effect_tooltip = endedscandal_tooltip_tt
+		swap_ideas = {
+     				remove_idea = government_scandal
+    				add_idea = admitted_scandal
+				}
+			}
+	option = { 	
+		name = rimmy.5.b
+		ai_chance = {
+			factor = 50
+		}		
+		set_country_flag = continued_lies
+		add_popularity = {
+            ideology = fascism
+            popularity = 0.10
+        }
+        add_popularity = {
+            ideology = democratic
+            popularity = 0.10
+        }
+        add_popularity = {
+            ideology = communism
+            popularity = 0.10
+        }
+        add_popularity = {
+            ideology = neutrality
+            popularity = -0.10
+        }
+	}
+}
+
+country_event = {
+	id = rimmy.6
+	title = rimmy.6.t
+	desc = rimmy.6.d
+	picture = GFX_report_event_generic_funeral
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = RIM
+		has_country_flag = continued_lies
+	}
+	
+	option = { 	
+		name = rimmy.6.a
+		ai_chance = {
+			factor = 100
+		}		
+		set_country_flag = leon_scandal
+		remove_unit_leader = 900
+	}
+}
+
+country_event = {
+	id = rimmy.7
+	title = rimmy.7.t
+	desc = rimmy.7.d
+	picture = GFX_news_event_gathering_protest
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = RIM
+		has_country_flag = leon_scandal
+	}
+	
+	option = { 	
+		name = rimmy.7.a
+		ai_chance = {
+			factor = 80
+		}		
+		custom_effect_tooltip = endedscandal_tooltip_tt
+		add_ideas = prolonged_scandal
+	}
+
+	option = { 	
+		name = rimmy.7.b
+		ai_chance = {
+			factor = 20
+		}		
+		custom_effect_tooltip = civilwarstart_tooltip_tt
+	}
+}
+
+country_event = {
+	id = rimmy.8
+	title = rimmy.8.t
+	desc = rimmy.8.d
+	picture = GFX_news_event_gathering_protest
+
+	is_triggered_only = yes
+
+	option = { 	
+		name = rimmy.8.a
+		ai_chance = {
+			factor = 90
+		}
+		RIM = { country_event = rimmy.9 }
+		remove_opinion_modifier = {
+           target = RIM
+           modifier = rim_denounce_target
+        }		
+	}
+
+	option = { 	
+		name = rimmy.8.b
+		ai_chance = {
+			factor = 10
+		}
+		RIM = { country_event = rimmy.10 }		
+	}
+}
+
+country_event = {
+	id = rimmy.9
+	title = rimmy.9.t
+	desc = rimmy.9.d
+	picture = GFX_news_event_gathering_protest
+
+	is_triggered_only = yes
+
+	option = { 	
+		name = rimmy.9.a
+		ai_chance = {
+			factor = 100
+		}
+		puppet = DEN
+		remove_opinion_modifier = {
+           target = DEN
+           modifier = rim_denounce_focus
+        }		
+	}
+}
+
+country_event = {
+	id = rimmy.10
+	title = rimmy.10.t
+	desc = rimmy.10.d
+	picture = GFX_news_event_gathering_protest
+
+	is_triggered_only = yes
+
+	option = { 	
+		name = rimmy.10.a
+		ai_chance = {
+			factor = 70
+		}
+		create_wargoal = {
+				type = take_state_focus
+				target = DEN
+				generator = { 99 } # Jutland
+			}	
+	}
+
+	option = { 	
+		name = rimmy.10.b
+		ai_chance = {
+			factor = 20
+		}
+		GER = { country_event = rimmy.11 }		
+	}
+}
+
+country_event = {
+	id = rimmy.11
+	title = rimmy.11.t
+	desc = rimmy.11.d
+	picture = GFX_news_event_gathering_protest
+
+	is_triggered_only = yes
+
+	option = { 	
+		name = rimmy.11.a
+		ai_chance = {
+			factor = 95
+		}
+		give_military_access = RIM	
+	}
+
+	option = { 	
+		name = rimmy.11.b
+		ai_chance = {
+			factor = 5
+		}
+		RIM = { country_event = rimmy.12 }		
+	}
+}
+
+country_event = {
+	id = rimmy.12
+	title = rimmy.12.t
+	desc = rimmy.12.d
+	picture = GFX_news_event_gathering_protest
+
+	is_triggered_only = yes
+
+	option = { 	
+		name = rimmy.12.a
+		ai_chance = {
+			factor = 100
+		}
+		RIM = {
+				add_opinion_modifier = { target = GER modifier = rim_denied_focus }
+			}	
+	}
+}
+
+country_event = {
+	id = rimmy.13
+	title = rimmy.13.t
+	desc = rimmy.13.d
+	picture = GFX_news_event_gathering_protest
+
+	is_triggered_only = yes
+
+	option = { 	
+		name = rimmy.13.a
+		ai_chance = {
+			factor = 95
+		}
+		RIM = { country_event = rimmy.14 }	
+	}
+
+	option = { 	
+		name = rimmy.13.b
+		ai_chance = {
+			factor = 5
+		}
+		RIM = { country_event = rimmy.15 }
+	}
+}
+
+country_event = {
+	id = rimmy.14
+	title = rimmy.14.t
+	desc = rimmy.14.d
+	picture = GFX_news_event_gathering_protest
+
+	is_triggered_only = yes
+
+	option = { 	
+		name = rimmy.14.a
+		ai_chance = {
+			factor = 95
+		}
+		set_state_owner = 669
+		add_state_core = 669	
+	}
+}
+
+country_event = {
+	id = rimmy.15
+	title = rimmy.15.t
+	desc = rimmy.15.d
+	picture = GFX_news_event_gathering_protest
+
+	is_triggered_only = yes
+
+	option = { 	
+		name = rimmy.15.a
+		ai_chance = {
+			factor = 75
+		}
+		RIM = {
+				add_opinion_modifier = { target = INS modifier = rim_denied_focus }
+			}	
+	}
+
+	option = { 	
+		name = rimmy.15.b
+		ai_chance = {
+			factor = 25
+		}
+		create_wargoal = {
+				type = take_state_focus
+				target = INS
+				generator = { 669 } # West Papua
+			}	
+	}
+}
+
+country_event = {
+	id = rimmy.16
+	title = rimmy.16.t
+	desc = rimmy.16.d
+	picture = GFX_news_event_gathering_protest
+
+	is_triggered_only = yes
+
+	option = { 	
+		name = rimmy.16.a
+		ai_chance = {
+			factor = 95
+		}
+		RIM = { country_event = rimmy.17 }	
+	}
+
+	option = { 	
+		name = rimmy.16.b
+		ai_chance = {
+			factor = 5
+		}
+		RIM = { country_event = rimmy.18 }
+	}
+}
+
+country_event = {
+	id = rimmy.17
+	title = rimmy.17.t
+	desc = rimmy.17.d
+	picture = GFX_news_event_gathering_protest
+
+	is_triggered_only = yes
+
+	option = { 	
+		name = rimmy.17.a
+		ai_chance= {
+			factor = 95
+		}
+		set_state_owner = 336
+		add_stability = 0.5
+		add_state_core = 336
+	}
+}
+
+country_event = {
+	id = rimmy.18
+	title = rimmy.18.t
+	desc = rimmy.18.d
+	picture = GFX_news_event_gathering_protest
+
+	is_triggered_only = yes
+
+	option = { 	
+		name = rimmy.18.a
+		ai_chance = {
+			factor = 75
+		}
+		RIM = {
+				add_opinion_modifier = { target = MAL modifier = rim_denied_focus }
+			}	
+	}
+
+	option = { 	
+		name = rimmy.18.b
+		ai_chance = {
+			factor = 25
+		}
+		create_wargoal = {
+				type = take_state_focus
+				target = MAL
+				generator = { 336 } # Malaya
+			}	
+	}
+}
+
+country_event = {
+	id = rimmy.19
+	title = rimmy.19.t
+	desc = rimmy.19.d
+	picture = GFX_news_event_gathering_protest
+
+	is_triggered_only = yes
+
+	option = { 	
+		name = rimmy.19.a
+		ai_chance = {
+			factor = 95
+		}
+		RIM = { country_event = rimmy.20 }	
+	}
+
+	option = { 	
+		name = rimmy.19.b
+		ai_chance = {
+			factor = 5
+		}
+		RIM = { country_event = rimmy.21 }
+	}
+}
+
+country_event = {
+	id = rimmy.20
+	title = rimmy.20.t
+	desc = rimmy.20.d
+	picture = GFX_news_event_hitler_speech
+
+	is_triggered_only = yes
+
+	option = { 	
+		name = rimmy.20.a
+		ai_chance = {
+			factor = 95
+		}
+		set_state_owner = 336
+		add_state_core = 336	
+	}
+}
